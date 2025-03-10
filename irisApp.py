@@ -5,6 +5,7 @@ import numpy as np
 # App Title
 st.title("🌸 Iris Flower Species Identifier")
 st.write("Please enter the flower measurements to predict its species.")
+st.write("Bashir Arsine")
 
 # User Inputs with Min, Max, and Default Values
 sepL = st.number_input("Sepal Length (cm)", min_value=4.3, max_value=7.9, value=5.8)
@@ -23,7 +24,7 @@ if st.button("🔍 Predict Species"):
         species_idx = model.predict(input_features)[0]
 
         # Mapping numerical output to species names
-        species_map = {0: "Iris Setosa", 1: "Iris Versicolor", 2: "Iris Virginica"}
+        species_map = {0: "Setosa", 1: "Versicolor", 2: "Virginica"}
         species_name = species_map.get(species_idx, "Unknown")
 
         st.success(f"🌿 The predicted species is: **{species_name}**")
